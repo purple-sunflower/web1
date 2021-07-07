@@ -4,6 +4,9 @@
 <title>보해의 인생_Past</title>
 <meta charset="utf-8">
 <style>
+  body{
+  margin:0;
+  }
   #active{
     color:red;
   }
@@ -17,26 +20,52 @@
   h1 {
     font-size:45px;
     text-align: center;
+    border-bottom:1px solid gray;
+    margin:0;
+    padding:20px;
   }
   h2 {
     text-align: center;
+  }
+  ol {
+    border-right: 1px solid gray;
+    width: 150px;
+    margin: 0;
+  }
+  h4{
+    margin:0;
+    padding:20px;
+  }
+  #grid{
+    display:grid;
+    grid-template-columns: 200px 1fr;
+  }
+  #grid ol{
+    padding-left: 30px
+  }
+  #grid #article{
+    padding-left: 20px;
   }
 </style>
 </head>
 <body>
 <h1><a href="index.html">보라해바라기</a></h1>
-<h4>목차</h4>
-<ol>
-  <li><a href="1.html" class="saw" id="active"> 과거</a></li>
-  <li><a href="2.html"> 현재</a></li>
-  <li><a href="3.html"> 미래</a></li>
-</ol>
-<h2>보라해바라기의 과거</h2>
-<p> 보라해바라기의 과거는 크게 초등학교, 중학교, 고등학교 시절로 나뉠 수 있다.</p>
-<ul>
-  <li><a href="4.html">초등학교</a></li>
-  <li><a href="5.html">중학교</a></li>
-  <li><a href="6.html">고등학교</a></li>
-</ul>
+<div id="grid">
+  <ol>
+    <h4>목차</h4>
+    <li><a href="1.html" class="saw" id="active"> 과거</a></li>
+    <li><a href="2.html"> 현재</a></li>
+    <li><a href="3.html"> 미래</a></li>
+  </ol>
+    <div id="ARTICLE">
+      <h2>보라해바라기의 과거</h2>
+      <p> 보라해바라기의 과거는 크게 초등학교, 중학교, 고등학교 시절로 나뉠 수 있다.</p>
+      <ul>
+        <li><a href="4.html">초등학교</a></li>
+        <li><a href="5.html">중학교</a></li>
+        <li><a href="6.html">고등학교</a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

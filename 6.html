@@ -4,6 +4,9 @@
 <title>보해의 인생_High</title>
 <meta charset="utf-8">
 <style>
+  body{
+  margin:0;
+  }
   a {
     color:purple;
     text-decoration: none;
@@ -11,29 +14,55 @@
   h1 {
     font-size:45px;
     text-align: center;
+    border-bottom: 1px gray solid;
+    padding: 20px;
+    margin:0;
   }
   h2 {
     text-align: center;
+  }
+  ol{
+    border-right: 1px gray solid;
+    margin:0;
+    width:150px;
+  }
+  h4{
+    margin:0;
+    padding:20px;
+  }
+  #grid{
+    display:grid;
+    grid-template-columns: 200px 1fr;
+  }
+  #grid ol{
+    padding-left: 30px;
+  }
+  #grid #ARTICLE{
+    padding-left: 20px;
   }
 </style>
 </head>
 <body>
 <h1><a href="index.html">보라해바라기</a></h1>
-<h4>목차</h4>
-<ol>
-  <li><a href="1.html"> 과거</a></li>
-  <li><a href="2.html"> 현재</a></li>
-  <li><a href="3.html"> 미래</a></li>
-</ol>
-<h2>보라해바라기의 과거</h2>
-<h3><a href="http://www.woonam.hs.kr/" target="_blank" title="운암고등학교">고등학교</a></h3>
-<p> 보라해바라기는 <strong>심리학</strong>에 관심이 많은 고등학생이 되었다.
-심리학과 관련된 책도 열심히 읽고 그와 관련된 활동들도 참여하며
-심리학 분야에 종사하고 싶다는 생각을 하게 된다.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hI-fjxpweNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br>특히 빅터플랭클의 <strong>죽음의 수용소에서</strong>를 읽고 심리학의 위대함에 대해 알게 된다.</p>
-<p>그 후 보라해바라기는 <u>상담</u>분야에 큰 관심을 가지게 된다.</p>
-<img src="counselor.jpg" width="450">
-<p><a href="1.html">이전</a></p>
+<div id="grid">
+  <ol>
+    <h4>목차</h4>
+    <li><a href="1.html"> 과거</a></li>
+    <li><a href="2.html"> 현재</a></li>
+    <li><a href="3.html"> 미래</a></li>
+  </ol>
+  <div id="ARTICLE">
+    <h2>보라해바라기의 과거</h2>
+    <h3><a href="http://www.woonam.hs.kr/" target="_blank" title="운암고등학교">고등학교</a></h3>
+    <p> 보라해바라기는 <strong>심리학</strong>에 관심이 많은 고등학생이 되었다.
+    심리학과 관련된 책도 열심히 읽고 그와 관련된 활동들도 참여하며
+    심리학 분야에 종사하고 싶다는 생각을 하게 된다.
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hI-fjxpweNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>특히 빅터플랭클의 <strong>죽음의 수용소에서</strong>를 읽고 심리학의 위대함에 대해 알게 된다.</p>
+    <p>그 후 보라해바라기는 <u>상담</u>분야에 큰 관심을 가지게 된다.</p>
+    <img src="counselor.jpg" width="450">
+    <p><a href="1.html">이전</a></p>
+  </div>
+</div>
 </body>
 </html>
