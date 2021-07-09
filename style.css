@@ -23,7 +23,7 @@ h2 {
 }
 ol {
   border-right: 1px solid gray;
-  width: 150px;
+  width: 120px;
   margin: 0;
 }
 h4{
@@ -35,7 +35,7 @@ h4{
   grid-template-columns: 200px 1fr;
 }
 #grid ol{
-  padding-left: 30px
+  padding-left: 40px
 }
 #grid #article{
   padding-left: 20px;
