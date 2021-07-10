@@ -1,5 +1,6 @@
 body{
   margin:0;
+  background-color: ivory;
 }
 #active {
   color: red;
@@ -35,7 +36,7 @@ h4{
   grid-template-columns: 200px 1fr;
 }
 #grid ol{
-  padding-left: 40px
+  padding-left: 40px;
 }
 #grid #article{
   padding-left: 20px;

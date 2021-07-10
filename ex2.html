@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="button" value="HI" onclick="alert('HI')">
+    <!-- onclick은 특별한 속성. onclick은 반드시 JS. onclick속성의 속성값은 웹브라우저가
+  가억하고 있다가 onclick속성이 위치하고 있는 태그에 사용자가 클릭했을 떄 JS문법으로
+  해석해서 동작. -->
+   <input type="text" onchange="alert('changed')">
+   <!-- 내용이 변하기 때문에 onchange. onclick, onchange,onkeydown 등은 event! -->
+   <input type="text" onkeydown="alert('key down!!')">
+  </body>
+</html>
