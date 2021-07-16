@@ -4,36 +4,41 @@
 <title>보해의 인생_Middle</title>
 <meta charset="utf-8">
  <link rel="stylesheet" href="style.css">
+ <script>
+ function nightDayHandler(self){
+   var target = document.querySelector('body');
+   if(self.value === 'night'){
+     target.style.backgroundColor = 'black';
+     target.style.color = 'ivory';
+     self.value = 'day';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       console.log(alist[i]);
+       alist[i].style.color = 'violet';
+       i = i + 1;
+       }
+   } else {
+     target.style.backgroundColor = 'ivory';
+     target.style.color = 'black';
+     self.value = 'night';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       console.log(alist[i]);
+       alist[i].style.color = 'purple';
+       i = i + 1;
+       }
+   }
+}
+ </script>
 </head>
 <body>
 <h1><a href="index.html">보라해바라기</a></h1>
 <input type="button" value="night" onclick="
-  var target = document.querySelector('body');
-  if(this.value === 'night'){
-    target.style.backgroundColor = 'black';
-    target.style.color = 'ivory';
-    this.value = 'day';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      console.log(alist[i]);
-      alist[i].style.color = 'violet';
-      i = i + 1;
-      }
-  } else {
-    target.style.backgroundColor = 'ivory';
-    target.style.color = 'black';
-    this.value = 'night';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      console.log(alist[i]);
-      alist[i].style.color = 'purple';
-      i = i + 1;
-      }
-  }
+  nightDayHandler(this);
 ">
 <div id="grid">
   <ol>
@@ -44,6 +49,7 @@
   </ol>
   <div id="ARTICLE">
     <h2>보라해바라기의 과거</h2>
+    <p><a href="1.html">이전</a></p>
     <h3><a href="http://www.haknam.ms.kr/" target="_blank" title="학남중학교">중학교</a></h3>
     <p>초등학교 때 했던 봉사활동을 중심으로 보라해바라기는 <strong>사회복지사</strong>가 되고 싶었다.
     <u>사교성</u>이 좋았던 보라해바라기는 다양한 친구들과 어울리며 인간관계에 대해서 배웠다.</p>
@@ -54,7 +60,6 @@
     <p>중학교 3학년 때, 보라해바라기는 심리학과 관련된 책을 읽고 심리학의 매력에 빠지게 된다.
     사람 자체를 원래 좋아했던 보해로서 심리학이라는 학문은 천생연분이라고 생각했다.
     순수하게 <u>학문적 흥미</u>를 가지고 심리학에 접근하기 시작했다.</p>
-    <p><a href="1.html">이전</a></p>
   </div>
 </div>
 </body>

@@ -4,36 +4,41 @@
 <title>보해의 인생_Elementary</title>
 <meta charset="utf-8">
  <link rel="stylesheet" href="style.css">
+ <script>
+ function nightDayHandler(self){
+   var target = document.querySelector('body');
+   if(self.value === 'night'){
+     target.style.backgroundColor = 'black';
+     target.style.color = 'ivory';
+     self.value = 'day';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       console.log(alist[i]);
+       alist[i].style.color = 'violet';
+       i = i + 1;
+       }
+   } else {
+     target.style.backgroundColor = 'ivory';
+     target.style.color = 'black';
+     self.value = 'night';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       console.log(alist[i]);
+       alist[i].style.color = 'purple';
+       i = i + 1;
+       }
+   }
+}
+ </script>
 </head>
 <body>
 <h1><a href="index.html">보라해바라기</a></h1>
 <input type="button" value="night" onclick="
-  var target = document.querySelector('body');
-  if(this.value === 'night'){
-    target.style.backgroundColor = 'black';
-    target.style.color = 'ivory';
-    this.value = 'day';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      console.log(alist[i]);
-      alist[i].style.color = 'violet';
-      i = i + 1;
-      }
-  } else {
-    target.style.backgroundColor = 'ivory';
-    target.style.color = 'black';
-    this.value = 'night';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      console.log(alist[i]);
-      alist[i].style.color = 'purple';
-      i = i + 1;
-      }
-  }
+  nightDayHandler(this);
 ">
 <div id="grid">
   <ol>
@@ -44,6 +49,7 @@
   </ol>
   <div id="ARTICLE">
     <h2>보라해바라기의 과거</h2>
+    <p><a href="1.html">이전</a></p>
     <h3><a href="http://www.hagnam.es.kr/" target="_blank" title="학남초등학교">초등학교</a></h3>
     <p>보라해바라기는 초등학교때부터 <strong>사회 복지</strong> 분야에 관심이 많았다.
     <br>그 바탕에는 부모님, 특히 <u>어머니</u>의 영향이 컸다.
@@ -53,7 +59,6 @@
     이 당시 보해는 <a href="https://namu.wiki/w/%EC%98%88%EC%8A%A4%EB%A7%A8" target="_blank" title="yesman">예스맨</a>이었다. 자신을 희생하면서까지 친구들의 부탁을 들어주는데만 집중하고 있었다.
     그 때, 이를 걱정하던 부모님이 담임선생님께 SOS를 요청했고 담임선생님과의 대화를 통해 거절의 미덕을 알게 되었다.</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/iXDCRcgERuw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="1.html">이전</a></p>
   </div>
 </div>
 </body>

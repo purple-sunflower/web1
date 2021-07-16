@@ -4,36 +4,41 @@
 <title>보해의 인생_Past</title>
 <meta charset="utf-8">
  <link rel="stylesheet" href="style.css">
+ <script>
+ function nightDayHandler(self){
+   var target = document.querySelector('body');
+   if(self.value === 'night'){
+     target.style.backgroundColor = 'black';
+     target.style.color = 'ivory';
+     self.value = 'day';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       console.log(alist[i]);
+       alist[i].style.color = 'violet';
+       i = i + 1;
+       }
+   } else {
+     target.style.backgroundColor = 'ivory';
+     target.style.color = 'black';
+     self.value = 'night';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       console.log(alist[i]);
+       alist[i].style.color = 'purple';
+       i = i + 1;
+       }
+   }
+}
+ </script>
 </head>
 <body>
 <h1><a href="index.html">보라해바라기</a></h1>
 <input type="button" value="night" onclick="
-  var target = document.querySelector('body');
-  if(this.value === 'night'){
-    target.style.backgroundColor = 'black';
-    target.style.color = 'ivory';
-    this.value = 'day';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      console.log(alist[i]);
-      alist[i].style.color = 'violet';
-      i = i + 1;
-      }
-  } else {
-    target.style.backgroundColor = 'ivory';
-    target.style.color = 'black';
-    this.value = 'night';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      console.log(alist[i]);
-      alist[i].style.color = 'purple';
-      i = i + 1;
-      }
-  }
+  nightDayHandler(this);
 ">
 <div id="grid">
   <ol>

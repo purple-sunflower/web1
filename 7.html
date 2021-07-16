@@ -4,36 +4,41 @@
 <title>보해의 인생_Before Elementary</title>
 <meta charset="utf-8">
  <link rel="stylesheet" href="style.css">
+ <script>
+ function nightDayHandler(self){
+   var target = document.querySelector('body');
+   if(self.value === 'night'){
+     target.style.backgroundColor = 'black';
+     target.style.color = 'ivory';
+     self.value = 'day';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       console.log(alist[i]);
+       alist[i].style.color = 'violet';
+       i = i + 1;
+       }
+   } else {
+     target.style.backgroundColor = 'ivory';
+     target.style.color = 'black';
+     self.value = 'night';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       console.log(alist[i]);
+       alist[i].style.color = 'purple';
+       i = i + 1;
+       }
+   }
+}
+ </script>
 </head>
 <body>
 <h1><a href="index.html">보라해바라기</a></h1>
 <input type="button" value="night" onclick="
-  var target = document.querySelector('body');
-  if(this.value === 'night'){
-    target.style.backgroundColor = 'black';
-    target.style.color = 'ivory';
-    this.value = 'day';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      console.log(alist[i]);
-      alist[i].style.color = 'violet';
-      i = i + 1;
-      }
-  } else {
-    target.style.backgroundColor = 'ivory';
-    target.style.color = 'black';
-    this.value = 'night';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      console.log(alist[i]);
-      alist[i].style.color = 'purple';
-      i = i + 1;
-      }
-  }
+  nightDayHandler(this);
 ">
 <div id="grid">
   <ol>
@@ -44,6 +49,7 @@
   </ol>
   <div id="ARTICLE">
     <h2>보라해바라기의 과거</h2>
+    <p><a href="1.html">이전</a></p>
     <h3>초등학교 전</h3>
     <p> 사실 초등학교 전 기억은 잘 나지 않는다.
       그래서 어린이집, 유치원 이렇게 세부적으로 시기를 나누지 않고 "초등학교 전"이라고 통칭하였다.</p>
@@ -54,7 +60,7 @@
       중간 쯤 까지는 잘하다가 갑자기 울음을 터뜨려서 학예회가 웃음바다가 되었다.
       그 당시 보해는 많이 부끄럽고 무서웠나보다.
       모두가 웃었던 그 때, 보해의 부모님은 보해의 마음을 진심으로 어루만져주며 용기를 주었고 그에 힘입어 보해는 무대를 무사히 마무리하였다.</p>
-    <p><a href="1.html">이전</a></p>
+
   </div>
 </div>
 </body>

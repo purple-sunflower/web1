@@ -4,36 +4,41 @@
 <title>보해의 인생_High</title>
 <meta charset="utf-8">
  <link rel="stylesheet" href="style.css">
+ <script>
+ function nightDayHandler(self){
+   var target = document.querySelector('body');
+   if(self.value === 'night'){
+     target.style.backgroundColor = 'black';
+     target.style.color = 'ivory';
+     self.value = 'day';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       console.log(alist[i]);
+       alist[i].style.color = 'violet';
+       i = i + 1;
+       }
+   } else {
+     target.style.backgroundColor = 'ivory';
+     target.style.color = 'black';
+     self.value = 'night';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       console.log(alist[i]);
+       alist[i].style.color = 'purple';
+       i = i + 1;
+       }
+   }
+}
+ </script>
 </head>
 <body>
 <h1><a href="index.html">보라해바라기</a></h1>
 <input type="button" value="night" onclick="
-  var target = document.querySelector('body');
-  if(this.value === 'night'){
-    target.style.backgroundColor = 'black';
-    target.style.color = 'ivory';
-    this.value = 'day';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      console.log(alist[i]);
-      alist[i].style.color = 'violet';
-      i = i + 1;
-      }
-  } else {
-    target.style.backgroundColor = 'ivory';
-    target.style.color = 'black';
-    this.value = 'night';
-
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-      console.log(alist[i]);
-      alist[i].style.color = 'purple';
-      i = i + 1;
-      }
-  }
+  nightDayHandler(this);
 ">
 <div id="grid">
   <ol>
@@ -44,6 +49,7 @@
   </ol>
   <div id="ARTICLE">
     <h2>보라해바라기의 과거</h2>
+    <p><a href="1.html">이전</a></p>
     <h3><a href="http://www.woonam.hs.kr/" target="_blank" title="운암고등학교">고등학교</a></h3>
     <p> 보라해바라기는 <strong>심리학</strong>에 관심이 많은 고등학생이 되었다.
     심리학과 관련된 책도 열심히 읽고 그와 관련된 활동들도 참여하며
@@ -55,7 +61,6 @@
     상담심리학분야에 많은 학자들이 존재하지만 보해는 <a href="https://terms.naver.com/entry.naver?docId=5676519&cid=62841&categoryId=62841" target="_blank" title="Carl Ransom Rogers"><strong>칼로저스</strong></a>의 학문에 흥미를 보였다.</p>
     <img src="Rogers.jpg" width="300">
     <p>그는 내담자를 대하는 치료자의 태도로 <u>진실성</u>, <u>무조건적 긍정적 존중</u>, <u>공감적 이해</u>를 강조하는데 보해는 이에 크게 공감했다.</p>
-    <p><a href="1.html">이전</a></p>
   </div>
 </div>
 </body>
