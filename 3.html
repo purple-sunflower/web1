@@ -5,34 +5,41 @@
 <meta charset="utf-8">
    <link rel="stylesheet" href="style.css">
    <script>
-   function nightDayHandler(self){
+   var Links = {
+     setColor:function (color){
+       var alist = document.querySelectorAll('a');
+       var i = 0;
+       while(i < alist.length){
+         console.log(alist[i]);
+         alist[i].style.color = color;
+         i = i + 1;
+       }
+     }
+   }
+   var Body = {
+     setColor:function (color){
+       document.querySelector('body').style.color = color;
+     },
+     setBackgroundColor:function (color){
+       document.querySelector('body').style.backgroundColor = color;
+     }
+   }
+   function nightDayHandler(self) {
      var target = document.querySelector('body');
      if(self.value === 'night'){
-       target.style.backgroundColor = 'black';
-       target.style.color = 'ivory';
+       Body.setBackgroundColor('black');
+       Body.setColor('ivory');
        self.value = 'day';
 
-       var alist = document.querySelectorAll('a');
-       var i = 0;
-       while(i < alist.length){
-         console.log(alist[i]);
-         alist[i].style.color = 'violet';
-         i = i + 1;
-         }
-     } else {
-       target.style.backgroundColor = 'ivory';
-       target.style.color = 'black';
+       Links.setColor('violet');
+         } else {
+       Body.setBackgroundColor('ivory');
+       Body.setColor('black');
        self.value = 'night';
 
-       var alist = document.querySelectorAll('a');
-       var i = 0;
-       while(i < alist.length){
-         console.log(alist[i]);
-         alist[i].style.color = 'purple';
-         i = i + 1;
-         }
+       Links.setColor('purple');
      }
- }
+  }
    </script>
 </head>
 <body>

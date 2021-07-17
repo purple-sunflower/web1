@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+      var coworkers = {
+        "programmer":"egoing",
+        "designer":"leezche"
+      };// 배열은 대괄호, 객체는 중괄호
+      document.write("programmer : "+coworkers.programmer+"<br>");
+      document.write("designer : "+coworkers.designer+"<br>");
+      //객체 만들어진 후 데이터 추가하고 싶다면?
+      coworkers.bookkeeper = "duru";
+      document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+      coworkers["data scientist"] = "taeho";
+      document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+    <h2>Interate</h2>
+    <script>
+      for(var key in coworkers){ // for:  coworkers라는 변수가 가리키는 객체에 있는 key값들을 가져오는 반복문
+      // key값: programmer, designer, bookkeeper, data scientist.
+      // 즉, 우리가 가져오고 싶은 정보에 도달할 수 있는 열쇠.
+      // coworkers에 있는 key값들 하나하나를 변수값으로 세팅해줌.
+        document.write(key+' : '+coworkers[key]+'<br>'); // 모든 데이터를 순회하면서 우리가 필요한 데이터가 있는지 없는지 확인 가능.
+      }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+      coworkers.showAll = function(){  // = function showAll(){}
+        for(var key in this){ // this는 자기자신을 가리킴.
+          document.write(key+' : '+this[key]+'<br>');
+        }
+      }
+      coworkers.showAll(); // 객체에 소속된 함수를 method라고 부름. 여기서 showAll은 method.
+      // 객체에 소속된 변수는 property. 여기서는 programmer, designer, bookkeeper, data scientist
+    </script>
+  </body>
+</html>
